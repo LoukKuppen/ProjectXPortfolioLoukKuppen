@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'HitMe';
+    src: url('fonts/Hit\ me\,\ punk!\ 01.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -30,6 +38,8 @@ body {
     margin: 100px 0 120px 0;
 }
 .genre-card {
+    position: relative;
+    overflow: hidden;
     background: #242424;
     border-radius: 20px;
     width: 600px;
@@ -44,6 +54,23 @@ body {
     transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
     box-shadow: 0 4px 16px rgba(0,0,0,0.2);
     text-align: center;
+
+.genre-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    font-family: 'HitMe', cursive, sans-serif;
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 2px 2px 8px #000;
+    pointer-events: none;
+    user-select: none;
+    letter-spacing: 0.2em;
+}
+
+
 }
 .genre-card:hover {
     transform: translateY(-12px) scale(1.05);
@@ -58,4 +85,23 @@ footer {
     padding: 40px 0 20px 0;
     font-size: 1rem;
     position: relative;
+}
+
+.genre-card {
+    position: relative;
+    overflow: hidden;
+    /* ...bestaande code... */
+}
+.genre-video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    z-index: 2;
+}
+.genre-card:hover .genre-video {
+    opacity: 1;
 }
