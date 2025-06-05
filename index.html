@@ -7,23 +7,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="logo-container">
-    <img class="logo-placeholder" src="Images/Logo Louk final.png" alt="Logo Louk Kuppen">
-    <div class="logo-description">
-        Welkom op mijn portfolio. Kies hieronder je gewenste genre.
+<body>
+    <video autoplay loop muted playsinline class="background-video">
+        <source src="Video/Background.mp4" type="video/mp4">
+        Je browser ondersteunt deze video niet.
+    </video>
+    <div class="logo-container">
+        <img class="logo-placeholder" src="Images/Logo Louk final.png" alt="Logo Louk Kuppen">
+        <div class="logo-description">
+            Welcome to my portfolio, choose a genre to explore my work.
+        </div>
     </div>
-</div>
 
 
 
 <div class="genres-section">
-<div class="genre-card" data-link="#boombap">
+<div class="genre-card" data-link="boombap.html">
     <span class="genre-title boombap-title">Boombap</span>
     <video class="genre-video" src="Video/BoombapV3.mp4" loop muted></video>
 </div>
 <div class="genre-card" data-link="#trap">
     <span class="genre-title trap-title">Trap</span>
-    <video class="genre-video" src="videos/trap.mp4" loop muted></video>
+    <video class="genre-video" src="Video/TrapV1.mp4" loop muted></video>
 </div>
 <div class="genre-card" data-link="#rnb">
     <span class="genre-title rnb-title">RnB</span>
