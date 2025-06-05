@@ -1,0 +1,123 @@
+body {
+    background: url('Images/BackgroundBoombap.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+.buttons-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.music-btn {
+    position: absolute;
+    border: none;
+    border-radius: 20px;
+    padding: 40px 60px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    transition:
+        transform 0.3s cubic-bezier(.25,.8,.25,1),
+        filter 0.3s,
+        box-shadow 0.3s;
+    z-index: 1;
+    outline: none;
+    background: none;
+    margin: 0;
+}
+
+/* Button 1: linksboven */
+.music-btn.btn1 {
+    top: 5%;
+    left: 5%;
+}
+
+/* Button 2: midden rechts */
+.music-btn.btn2 {
+    top: 50%;
+    right: 10%;
+    left: auto;
+    transform: translateY(-50%);
+}
+
+/* Button 3: linksonder */
+.music-btn.btn3 {
+    bottom: 5%;
+    left: 30%;
+}
+
+/* Info tekst standaard rechts */
+.music-btn .btn-info {
+    display: none;
+    position: absolute;
+    left: 110%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(20,20,20,0.95);
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 16px;
+    min-width: 180px;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+}
+
+/* Info tekst bij button 2 links */
+.music-btn.btn2 .btn-info {
+    left: auto;
+    right: 110%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Hover/active effect algemeen */
+.music-btn.active,
+.music-btn:hover {
+    z-index: 2;
+    /* Alleen voor btn2 de juiste transform */
+}
+
+.music-btn.btn2.active,
+.music-btn.btn2:hover {
+    transform: translateY(-50%) scale(1.15);
+}
+
+.music-btn.btn1.active,
+.music-btn.btn1:hover,
+.music-btn.btn3.active,
+.music-btn.btn3:hover {
+    transform: scale(1.15);
+}
+
+/* Info tekst tonen bij hover */
+.music-btn:hover .btn-info {
+    display: block;
+}
+
+/* Blur effect op niet-gehoverde knoppen */
+.music-btn.blur {
+    filter: blur(4px) brightness(0.7);
+    z-index: 0;
+}
+
+/* Afbeelding styling */
+.btn-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 16px;
+    display: block;
+    margin: 0 auto 12px auto;
+    transition: filter 0.3s;
+    filter: drop-shadow(0 6px 32px rgba(0,0,0,0.7));
+}
+
+.music-btn.active .btn-img,
+.music-btn:hover .btn-img {
+    filter: drop-shadow(0 12px 48px rgba(0,0,0,0.9));
+}
