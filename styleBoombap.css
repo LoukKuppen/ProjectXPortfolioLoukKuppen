@@ -30,13 +30,13 @@ body {
     margin: 0;
 }
 
-/* Button 1: linksboven */
+
 .music-btn.btn1 {
     top: 5%;
     left: 5%;
 }
 
-/* Button 2: midden rechts */
+
 .music-btn.btn2 {
     top: 50%;
     right: 10%;
@@ -44,13 +44,13 @@ body {
     transform: translateY(-50%);
 }
 
-/* Button 3: linksonder */
+
 .music-btn.btn3 {
     bottom: 5%;
     left: 30%;
 }
 
-/* Info tekst standaard rechts */
+
 .music-btn .btn-info {
     display: none;
     position: absolute;
@@ -67,7 +67,7 @@ body {
     box-shadow: 0 2px 12px rgba(0,0,0,0.4);
 }
 
-/* Info tekst bij button 2 links */
+
 .music-btn.btn2 .btn-info {
     left: auto;
     right: 110%;
@@ -75,11 +75,11 @@ body {
     transform: translateY(-50%);
 }
 
-/* Hover/active effect algemeen */
+
 .music-btn.active,
 .music-btn:hover {
     z-index: 2;
-    /* Alleen voor btn2 de juiste transform */
+
 }
 
 .music-btn.btn2.active,
@@ -94,18 +94,18 @@ body {
     transform: scale(1.15);
 }
 
-/* Info tekst tonen bij hover */
+
 .music-btn:hover .btn-info {
     display: block;
 }
 
-/* Blur effect op niet-gehoverde knoppen */
+
 .music-btn.blur {
     filter: blur(4px) brightness(0.7);
     z-index: 0;
 }
 
-/* Afbeelding styling */
+
 .btn-img {
     width: 180px;
     height: 180px;

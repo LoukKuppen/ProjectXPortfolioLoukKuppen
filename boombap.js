@@ -14,7 +14,6 @@ document.querySelectorAll('.music-btn').forEach(btn => {
         });
     });
     btn.addEventListener('click', () => {
-        // Voeg hier het pad naar jouw .wav bestand toe, bijvoorbeeld:
         // btn.querySelector('.audio-player').src = 'Audio/beat1.wav';
         const audio = btn.querySelector('.audio-player');
         if (audio.src) {
