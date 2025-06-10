@@ -4,26 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boombap | Project X Portfolio Louk Kuppen</title>
-    <link rel="stylesheet" href="styleRnb.css">
+    <link rel="stylesheet" href="styleBoombap.css">
 </head>
 <body>
-<div class="buttons-container">
-    <div class="music-btn btn1" data-index="0">
-        <img src="Images/Playbutton.png" alt="Beat 1" class="btn-img">
-        <div class="btn-info">Beschrijving van Beat 1</div>
-        <audio class="audio-player" src="" preload="auto"></audio>
+    <video autoplay loop muted playsinline class="background-video">
+        <source src="Video/Background.mp4" type="video/mp4">
+        Je browser ondersteunt deze video niet.
+    </video>
+    <div class="buttons-container">
+        <h1 class="boombap-title">RnB</h1>
+        <button class="music-btn btn1" data-index="0">
+            Beat 1
+            <div class="btn-info">If you are interested in this work, contact me.</div>
+            <audio class="audio-player" src="" preload="auto"></audio>
+        </button>
+        <button class="music-btn btn2" data-index="1">
+            Beat 2
+            <div class="btn-info">If you are interested in this work, contact me.</div>
+            <audio class="audio-player" src="" preload="auto"></audio>
+        </button>
+        <button class="music-btn btn3" data-index="2">
+            Beat 3
+            <div class="btn-info">If you are interested in this work, contact me.</div>
+            <audio class="audio-player" src="" preload="auto"></audio>
+        </button>
     </div>
-    <div class="music-btn btn2" data-index="1">
-        <img src="Images/Playbutton.png" alt="Beat 2" class="btn-img">
-        <div class="btn-info">Beschrijving van Beat 2</div>
-        <audio class="audio-player" src="" preload="auto"></audio>
-    </div>
-    <div class="music-btn btn3" data-index="2">
-        <img src="Images/Playbutton.png" alt="Beat 3" class="btn-img">
-        <div class="btn-info">Beschrijving van Beat 3</div>
-        <audio class="audio-player" src="" preload="auto"></audio>
-    </div>
-</div>
     <script src="boombap.js"></script>
 </body>
 </html>

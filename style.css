@@ -1,23 +1,24 @@
 @font-face {
     font-family: 'BoombapFont';
-    src: url('Fonts/Marcsc___.ttf') format('truetype');
+    src: url('Fonts/BebasNeue-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'TrapFont';
-    src: url('Fonts/Jump\ Streets\ Regular.ttf') format('truetype');
+    src: url('Fonts/BebasNeue-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'RnBFont';
-    src: url('Fonts/Pacifico.ttf') format('truetype');
+    src: url('Fonts/BebasNeue-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
+
 
 
 body {
@@ -37,7 +38,7 @@ body {
     height: auto;
     z-index: -1;
     object-fit: cover;
-    opacity: 0.25; /* Pas aan voor gewenste zichtbaarheid */
+    opacity: 0.25;
     pointer-events: none;
 }
 
@@ -46,8 +47,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: auto px;
-    margin-top: 40px;
+    margin-top: 80px;
 }
 
 .logo-placeholder {
@@ -60,9 +60,11 @@ body {
     justify-content: center;
     font-size: 1.2rem;
     color: #aaa;
+    margin-bottom: 40px; 
 }
+
 .logo-description {
-    margin-top: 90px;
+    margin-top: 0; 
     margin-bottom: 30px;
     text-align: center;
     font-size: 1.5rem;
@@ -111,12 +113,15 @@ body {
 
 .boombap-title {
     font-family: 'BoombapFont', cursive, sans-serif;
+    font-size: 8rem;
 }
 .trap-title {
     font-family: 'TrapFont', cursive, sans-serif;
+    font-size: 8rem;
 }
 .rnb-title {
     font-family: 'RnBFont', cursive, sans-serif;
+    font-size: 8rem;
 }
 
 
@@ -152,4 +157,21 @@ footer {
 }
 .genre-card:hover .genre-video {
     opacity: 1;
+}
+
+
+.genre-video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    pointer-events: none;
+    transition: filter 0.3s, opacity 0.3s;
+    z-index: 2;
+    filter: grayscale(1); 
+}
+
+.genre-card:hover .genre-video {
+    filter: none;
 }

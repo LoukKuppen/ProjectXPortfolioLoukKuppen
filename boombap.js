@@ -1,4 +1,4 @@
-document.querySelectorAll('.music-btn').forEach(btn => {
+document.querySelectorAll('.music-btn').forEach((btn, idx) => {
     btn.addEventListener('mouseenter', () => {
         document.querySelectorAll('.music-btn').forEach(other => {
             if (other !== btn) {
@@ -14,11 +14,31 @@ document.querySelectorAll('.music-btn').forEach(btn => {
         });
     });
     btn.addEventListener('click', () => {
-        // btn.querySelector('.audio-player').src = 'Audio/beat1.wav';
-        const audio = btn.querySelector('.audio-player');
-        if (audio.src) {
-            audio.currentTime = 0;
-            audio.play();
+        const videoPlayerContainer = document.getElementById('videoPlayerContainer');
+        const beatVideo = document.getElementById('beatVideo');
+        // Kies per knop een andere video
+        let videoSrc = "";
+        if (idx === 0) {
+            videoSrc = "Video/BoombapVisualizerV1.mp4";
+        } else if (idx === 1) {
+            videoSrc = "Video/BoomBapVisualizer2V1.mp4";
+        } else if (idx === 2) {
+            videoSrc = "Video/BoomBapVisualizer3V1.mp4";
         }
+        beatVideo.src = videoSrc;
+        beatVideo.currentTime = 0;
+        beatVideo.volume = 1;
+        beatVideo.play();
+        videoPlayerContainer.style.display = "flex";
     });
+});
+
+// Klik buiten de video om te sluiten
+document.addEventListener('click', function(e) {
+    const container = document.getElementById('videoPlayerContainer');
+    const video = document.getElementById('beatVideo');
+    if (container.style.display === "flex" && !container.contains(e.target) && !e.target.classList.contains('music-btn')) {
+        video.pause();
+        container.style.display = "none";
+    }
 });
