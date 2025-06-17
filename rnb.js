@@ -19,11 +19,11 @@ document.querySelectorAll('.music-btn').forEach((btn, idx) => {
         // Kies per knop een andere video
         let videoSrc = "";
         if (idx === 0) {
-            videoSrc = "Video/Hiermoetdieeerstedaggoe";
+            videoSrc = "Video/RnBVisualizerV1.mp4";
         } else if (idx === 1) {
-            videoSrc = "Video/Hiermoetdietweededaggoe";
+            videoSrc = "Video/RnBVisualizer2V1.mp4";
         } else if (idx === 2) {
-            videoSrc = "Video/Hiermoetdiederdedaggoe";
+            videoSrc = "Video/RnBVisualizerV1.mp4";
         }
         beatVideo.src = videoSrc;
         beatVideo.currentTime = 0;
