@@ -164,3 +164,19 @@ body {
         padding: 10px 0;
     }
 }
+
+
+.video-player-container iframe {
+    width: 800px;
+    height: 450px;
+    border-radius: 12px;
+    background: #000;
+    border: none;
+}
+@media (max-width: 900px) {
+    .video-player-container iframe {
+        width: 90vw;
+        height: 50vw;
+        max-width: 100%;
+    }
+}

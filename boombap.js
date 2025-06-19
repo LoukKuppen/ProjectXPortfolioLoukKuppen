@@ -16,19 +16,17 @@ document.querySelectorAll('.music-btn').forEach((btn, idx) => {
     btn.addEventListener('click', () => {
         const videoPlayerContainer = document.getElementById('videoPlayerContainer');
         const beatVideo = document.getElementById('beatVideo');
-        // Kies per knop een andere video
-        let videoSrc = "";
+        // Zet hier je YouTube video ID's
+        let youtubeId = "";
         if (idx === 0) {
-            videoSrc = "Video/BoombapVisualizerV4.mp4";
+            youtubeId = "Ety70Q3ytFw";
         } else if (idx === 1) {
-            videoSrc = "Video/BoombapVisualizer2V3.mp4";
+            youtubeId = "xB0MvTQj85w";
         } else if (idx === 2) {
-            videoSrc = "Video/BoombapVisualizer3V3.mp4";
+            youtubeId = "disBQWFhPkA";
         }
-        beatVideo.src = videoSrc;
-        beatVideo.currentTime = 0;
-        beatVideo.volume = 1;
-        beatVideo.play();
+        // Embed link met autoplay
+        beatVideo.src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1`;
         videoPlayerContainer.style.display = "flex";
     });
 });
@@ -38,7 +36,7 @@ document.addEventListener('click', function(e) {
     const container = document.getElementById('videoPlayerContainer');
     const video = document.getElementById('beatVideo');
     if (container.style.display === "flex" && !container.contains(e.target) && !e.target.classList.contains('music-btn')) {
-        video.pause();
+        video.src = "";
         container.style.display = "none";
     }
 });
