@@ -19,11 +19,11 @@ document.querySelectorAll('.music-btn').forEach((btn, idx) => {
         // Kies per knop een andere video
         let videoSrc = "";
         if (idx === 0) {
-            videoSrc = "Video/BoombapVisualizerV2.mp4";
+            videoSrc = "Video/BoombapVisualizerV4.mp4";
         } else if (idx === 1) {
-            videoSrc = "Video/BoombapVisualizer2V1.mp4";
+            videoSrc = "Video/BoombapVisualizer2V3.mp4";
         } else if (idx === 2) {
-            videoSrc = "Video/BoombapVisualizer3V2.mp4";
+            videoSrc = "Video/BoombapVisualizer3V3.mp4";
         }
         beatVideo.src = videoSrc;
         beatVideo.currentTime = 0;

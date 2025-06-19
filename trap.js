@@ -21,9 +21,9 @@ document.querySelectorAll('.music-btn').forEach((btn, idx) => {
         if (idx === 0) {
             videoSrc = "Video/TrapVisualizerV1.mp4";
         } else if (idx === 1) {
-            videoSrc = "Video/TrapVisualizer2V1.mp4";
+            videoSrc = "Video/TrapVisualizer2V2.mp4";
         } else if (idx === 2) {
-            videoSrc = "Video/TrapVisualizer3V2.mp4";
+            videoSrc = "Video/TrapVisualizer3V3.mp4";
         }
         beatVideo.src = videoSrc;
         beatVideo.currentTime = 0;
